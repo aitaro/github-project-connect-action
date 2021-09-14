@@ -3007,7 +3007,7 @@ const github = __importStar(__webpack_require__(469));
 const token = core.getInput("github-token", { required: true });
 const octokit = new github.GitHub(token);
 function findIssueReference(text) {
-    const match = text.match(/(?:[Cc]onnects?(?:\sto)?|[Cc]lose[sd]?|[Ff]ixe?[sd]?|[Rr]esolve[sd]?)\s+#(\d+)/);
+    const match = text.match(/(?:[Cc]onnects?(?:\sto)?|[Cc]lose[sd]?:?|[Ff]ixe?[sd]?:?|[Rr]esolve[sd]?:?)\s+#(\d+)/);
     if (match)
         return Number(match[1]);
 }
